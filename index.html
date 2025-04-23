@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello-Electron</title>
+  </head>
+  <body>
+    <h1>Electron App</h1>
+    <button id="pingButton">Send Ping to Main</button>
+    <p id="response"></p>
+
+    <script>
+
+      const { ipcRenderer } = require('electron');
+
+      const pingButton = document.getElementById('pingButton');
+      const responseParagraph = document.getElementById('response');
+
+      pingButton.addEventListener('click', () => {
+        ipcRenderer.send('ping', 'ping message from renderer');
+        console.log("click")
+      });
+
+      ipcRenderer.on('pong', (event, arg) => {
+        responseParagraph.textContent = 'Received from main process: ' + arg;
+        console.log("pong")
+
+      });
+
+    </script>
+
+  </body>
+</html>
