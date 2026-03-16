@@ -35,7 +35,3 @@ This uses `electron-builder` to package the app for your platform. The output fi
 - The app currently uses default Electron icons.
 - The Linux build category is set to "Utility" by default.
 - The app is configured to build Snap and AppImage packages for Linux.
-
-## License
-
-MIT License
