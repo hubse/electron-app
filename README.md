@@ -1,6 +1,25 @@
 # Hello Electron
 
-Hello Electron is a minimal Electron application that displays a simple "Hello World" message in a desktop window.
+Electron is an open-source framework for building cross-platform desktop applications using web technologies such as HTML, CSS, and JavaScript. It combines:
+- Chromium (the browser engine behind Google Chrome) for rendering the user interface.
+- Node.js for accessing the operating system and performing backend tasks.
+Electron allows developers to create desktop apps for Windows, macOS, and Linux from a single codebase.
+
+
+Basic Architecture
+
++-------------------+
+| Main Process      |
+| (Node.js)         |
+| OS Access         |
++---------+---------+
+          |
+          |
++---------v---------+
+| Renderer Process  |
+| (Chromium)        |
+| HTML/CSS/JS UI    |
++-------------------+
 
 ## Features
 
