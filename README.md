@@ -5,21 +5,21 @@ Electron is an open-source framework for building cross-platform desktop applica
 - Node.js for accessing the operating system and performing backend tasks.
 Electron allows developers to create desktop apps for Windows, macOS, and Linux from a single codebase.
 
+### Explanation
 
-Basic Architecture
+- **Main Process**
+  - Runs Node.js
+  - Controls the application lifecycle
+  - Manages native OS features (windows, menus, tray, etc.)
 
-+-------------------+
-| Main Process      |
-| (Node.js)         |
-| OS Access         |
-+---------+---------+
-          |
-          |
-+---------v---------+
-| Renderer Process  |
-| (Chromium)        |
-| HTML/CSS/JS UI    |
-+-------------------+
+- **Renderer Process**
+  - Runs inside Chromium
+  - Handles the user interface
+  - Each window/tab runs in its own renderer process
+
+- **IPC (Inter-Process Communication)**
+  - Bridge between Main and Renderer processes
+  - Used to safely send data and commands between UI and system layer
 
 ## Features
 
