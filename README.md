@@ -43,14 +43,8 @@ npm run build
 
 This uses `electron-builder` to package the app for your platform. The output files will be located in the `dist` directory.
 
-## File Structure
-
-- `main.js`: Main process script that creates the application window.
-- `index.html`: The UI of the app.
-- `package.json`: Project metadata and build configuration.
 
 ## Notes
 
-- The app currently uses default Electron icons.
 - The Linux build category is set to "Utility" by default.
 - The app is configured to build Snap and AppImage packages for Linux.
